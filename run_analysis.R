@@ -30,8 +30,14 @@ run_analysis <- function(uci_har_dataset_path = "./UCI HAR Dataset") {
     
     # Rename columns
     data_cols_names <- feature_list[feature_list$consider, 2, with=FALSE]
-    names <- append(c("individual", "activity"), as.character(data_cols_names[[1]]))
+    names <- append(c("volunteerID", "activity"), as.character(data_cols_names[[1]]))
     names(data) <- names
+    
+    # Use activity names
+    activities <- read.table(file.path(uci_har_dataset_path, "activity_labels.txt"))
+    warning("substitute activity id by corresponding label")
+    
+    
     data
 }
 
