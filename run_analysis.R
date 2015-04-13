@@ -30,7 +30,7 @@ run_analysis <- function(uci_har_dataset_path = "./UCI HAR Dataset") {
     
     # Rename columns
     data_cols_names <- feature_list[feature_list$consider, 2, with=FALSE]
-    names <- append(c("individual", "activity"), data_cols_names[[1]])
+    names <- append(c("individual", "activity"), as.character(data_cols_names[[1]]))
     names(data) <- names
     data
 }
