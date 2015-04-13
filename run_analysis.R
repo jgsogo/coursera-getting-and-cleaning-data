@@ -22,7 +22,8 @@ run_analysis <- function(uci_har_dataset_path = "./UCI HAR Dataset") {
     #base_path <- file.path(uci_har_dataset_path, "train")
     #test_data <- tidy_dataset(file.path(base_path, "subject_train.txt"),
     #                          file.path(base_path, "y_train.txt"),
-    #                          file.path(base_path, "X_train.txt")
+    #                          file.path(base_path, "X_train.txt"),
+    #                          data_cols
     #)
 
     # Append datasets
@@ -33,9 +34,10 @@ run_analysis <- function(uci_har_dataset_path = "./UCI HAR Dataset") {
     names <- append(c("volunteerID", "activity"), as.character(data_cols_names[[1]]))
     names(data) <- names
     
-    # Use activity names
+    # Use activity labels
     activities <- read.table(file.path(uci_har_dataset_path, "activity_labels.txt"))
-    warning("substitute activity id by corresponding label")
+    data$activity <- as.character(activities[match(data$activity, activities$V1), 'V2'])
+    data$activity <- as.factor(data$activity)
     
     
     data
