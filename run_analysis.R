@@ -1,9 +1,11 @@
 # Read the "UCI HAR Dataset" and builds a single and tidy dataset
 
+library(data.table)
+
 run_analysis <- function(uci_har_dataset_path = "./UCI HAR Dataset") {
     cat("Running analysis over dataset at ", uci_har_dataset_path, " (expected UCI HAR Dataset)\n")
     
-    # Feautres from data that we are considering
+    # Features from data that we are considering
     feature_list <- data.table(read.table(file.path(uci_har_dataset_path, "features.txt")))
     feature_list <- feature_list[, consider:=grepl("std\\(\\)|mean\\(\\)",feature_list$V2)]
     data_cols <- feature_list[feature_list$consider, 1, with=FALSE]
