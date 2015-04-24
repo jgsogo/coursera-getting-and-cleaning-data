@@ -39,3 +39,8 @@ The meaning of the first two columns is the following:
 
 The rest of the columns correspond to the features on the original dataset documented
 in the [features_info.txt](./UCI HAR Dataset/features_info.txt) file.
+
+
+## Observations in rows
+
+Each row contains the average of the variables for each activity and each subject.
