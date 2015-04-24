@@ -10,7 +10,7 @@ directory. More information about this dataset and how it was collected
 can be found at the UCI Repository ([here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)).
 
 
-# run_analysis.R
+## run_analysis.R
 
 File `run_analysis.R` defines several functions in R language to perform the
 analysis over the dataset. To perform yourself the analysis in your computer
@@ -40,4 +40,12 @@ This function works over the data following these steps:
 To load the test and the train data, the function uses another function also defined in
 the same file, `tidy_dataset`, which is the one that actually reads the data files, filters
 according to the selected features and build one single table.
+
+There are a couple of auxiliary functions: 
+
+ * `compute_avg` to compute the average of each variable for each individual regarding each
+   activity,
+ * `debug_script` which is a function that performs all the analysis and outputs it to a file. 
+
+ The codebook for the output file is detailed in the accompaning file `CodeBook.md`.
 
