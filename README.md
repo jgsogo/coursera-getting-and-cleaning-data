@@ -4,7 +4,7 @@ This is a repository created for the course project of the
 [Getting and Cleaning Data](https://class.coursera.org/getdata-013/)
 course in Coursera.
 
-The file `run_analysis.R` contains the functions needed to perform the
+The file [run_analysis.R](./run_analysis.R) contains the functions needed to perform the
 analysis on the data about wearable computing located in the `UCI HAR Dataset`
 directory. More information about this dataset and how it was collected
 can be found at the UCI Repository ([here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)).
@@ -12,7 +12,7 @@ can be found at the UCI Repository ([here](http://archive.ics.uci.edu/ml/dataset
 
 ## run_analysis.R
 
-File `run_analysis.R` defines several functions in R language to perform the
+File [run_analysis.R](./run_analysis.R) defines several functions in R language to perform the
 analysis over the dataset. To perform yourself the analysis in your computer
 just follow these steps (inside R console):
 
@@ -47,5 +47,5 @@ There are a couple of auxiliary functions:
    activity,
  * `debug_script` which is a function that performs all the analysis and outputs it to a file. 
 
- The codebook for the output file is detailed in the accompaning file `CodeBook.md`.
+The codebook for the output file is detailed in the accompaning file [CodeBook.md](./CodeBook.md).
 
