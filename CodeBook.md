@@ -1,6 +1,6 @@
 # CodeBook
 
-The output from the `run_analysis.R` script is a table like the one below:
+The output from the [run_analysis.R](./run_analysis.R) script is a table like the one below:
 
 ```
 "volunteerID"   "activity"  "tBodyAcc-mean()-X"     "tBodyAcc-mean()-Y"      [...]
